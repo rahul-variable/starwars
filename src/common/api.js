@@ -1,10 +1,12 @@
 import axios from 'axios';
 import { LOGIN_DETAILS } from './constants';
 export const HTTP_POST = 'post';
-export const fetchData = (url, method = HTTP_POST, data = {}) => {
+export const HTTP_GET = 'get';
+const proxyurl = 'https://cors-anywhere.herokuapp.com/';
+export const fetchData = (url, method = HTTP_GET, data = {}) => {
   return axios({
     method: method,
-    url: url,
+    url: proxyurl + url,
     data: data,
   });
 };

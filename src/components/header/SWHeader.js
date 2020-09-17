@@ -1,13 +1,15 @@
 import React from 'react';
 import logo from '../../assets/images/logo.png';
-import { Authentication } from '../../common/authenticate';
+import { useSelector } from 'react-redux';
 import { SWSignout } from './SWSignout';
+const getUserInfo = (state) => state.userInfo.user;
 export const SWHeader = () => {
+  const user = useSelector(getUserInfo);
   return (
     <React.Fragment>
       <header>
         <img src={logo} className="logo" />
-        <div className="signout">{Authentication.isAuthenticate() && <SWSignout />}</div>
+        <div className="signout">{user && <SWSignout />}</div>
       </header>
     </React.Fragment>
   );

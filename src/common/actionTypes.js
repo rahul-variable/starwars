@@ -1,1 +1,3 @@
-export const USER_ACTION_TYPE = 'useractiontype';
+export const USER_ACTION_LOGIN = 'USER_ACTION_LOGIN';
+export const USER_ACTION_SIGNOUT = 'USER_ACTION_SIGNOUT';
+export const PLANET_ACTION_FULFILLED = 'PLANET_ACTION_FULFILLED';

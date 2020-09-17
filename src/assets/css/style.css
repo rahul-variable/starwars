@@ -65,3 +65,6 @@ button {
   width: 10%;
   float: right;
 }
+.searchResult {
+  margin: 20px;
+}

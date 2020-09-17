@@ -7,6 +7,12 @@ module.exports = (env) => {
     devServer: {
       port: 3000,
       open: true,
+      proxy: {
+        '/api/**': {
+          target: 'https://swapi.dev/api',
+        },
+      },
+
       historyApiFallback: true,
     },
   });

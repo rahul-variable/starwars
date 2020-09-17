@@ -4,9 +4,9 @@ import { useFormFields } from '../../reusable/hooks/useFormFields';
 import { validation } from '../../../common/validationUtils';
 import { dummyLoginApi } from '../../../common/api';
 import { SW_ROUTE_URL } from '../../../common/constants';
-import { USER_ACTION_TYPE } from '../../../common/actionTypes';
+import { USER_ACTION_LOGIN } from '../../../common/actionTypes';
 import history from '../../../common/history';
-import { Authentication } from '../../../common/authenticate';
+import { useDispatch } from 'react-redux';
 const intialState = {
   data: {},
   error: {},
@@ -14,6 +14,7 @@ const intialState = {
 };
 export const SWLoginContainer = () => {
   const [loginError, setState] = useState(false);
+  const dispatch = useDispatch();
   const [fields, onChange, reset] = useFormFields(intialState);
   const onLoginClick = () => {
     const { data } = fields;
@@ -34,10 +35,10 @@ export const SWLoginContainer = () => {
   const callLoginApi = async (data) => {
     try {
       const response = await dummyLoginApi(data);
-      Authentication.setUser(response);
-      // dispatch({ type: USER_ACTION_TYPE, payload: { user: response } });
+      dispatch({ type: USER_ACTION_LOGIN, payload: { user: response } });
       history.push(SW_ROUTE_URL.DASHBOARD);
     } catch (error) {
+      console.log(error);
       setState(true);
     }
   };
