@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 15px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #f1f1f1;
+  color: black;
+}
+main {
+  min-height: 470px;
+}
+.logo {
+  width: 100px;
+}
