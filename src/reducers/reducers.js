@@ -1,5 +1,5 @@
-import { reducer as formReducer } from 'redux-form';
+import { userReducer } from '../reducers/userReducer';
 
 export const reducers = {
-  form: formReducer,
+  userInfo: userReducer,
 };

@@ -20,3 +20,48 @@ main {
 .logo {
   width: 100px;
 }
+.container {
+  padding: 16px;
+  width: 50%;
+  margin: auto;
+}
+
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(83, 179, 235);
+  box-sizing: border-box;
+  border-radius: '2px';
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.errorContainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+  color: red;
+  font-weight: bold;
+}
+
+.errorDiv {
+  color: red;
+  font-weight: bold;
+  margin: 0px 0 15px 0;
+}
+
+.signout {
+  width: 10%;
+  float: right;
+}
